@@ -1,0 +1,54 @@
+# Project: stDanych
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = obj/Array2d.o obj/main.o obj/ListSTL.o obj/StackSTL.o obj/QueueSTL.o obj/AppInterface.o obj/List2s.o obj/Stack2s.o obj/Queue2s.o $(RES)
+LINKOBJ  = obj/Array2d.o obj/main.o obj/ListSTL.o obj/StackSTL.o obj/QueueSTL.o obj/AppInterface.o obj/List2s.o obj/Stack2s.o obj/Queue2s.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = stDanych.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before stDanych.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "stDanych.exe" $(LIBS)
+
+obj/Array2d.o: src/Array2d.cpp
+	$(CPP) -c src/Array2d.cpp -o obj/Array2d.o $(CXXFLAGS)
+
+obj/main.o: src/main.cpp
+	$(CPP) -c src/main.cpp -o obj/main.o $(CXXFLAGS)
+
+obj/ListSTL.o: src/ListSTL.cpp
+	$(CPP) -c src/ListSTL.cpp -o obj/ListSTL.o $(CXXFLAGS)
+
+obj/StackSTL.o: src/StackSTL.cpp
+	$(CPP) -c src/StackSTL.cpp -o obj/StackSTL.o $(CXXFLAGS)
+
+obj/QueueSTL.o: src/QueueSTL.cpp
+	$(CPP) -c src/QueueSTL.cpp -o obj/QueueSTL.o $(CXXFLAGS)
+
+obj/AppInterface.o: src/AppInterface.cpp
+	$(CPP) -c src/AppInterface.cpp -o obj/AppInterface.o $(CXXFLAGS)
+
+obj/List2s.o: src/List2s.cpp
+	$(CPP) -c src/List2s.cpp -o obj/List2s.o $(CXXFLAGS)
+
+obj/Stack2s.o: src/Stack2s.cpp
+	$(CPP) -c src/Stack2s.cpp -o obj/Stack2s.o $(CXXFLAGS)
+
+obj/Queue2s.o: src/Queue2s.cpp
+	$(CPP) -c src/Queue2s.cpp -o obj/Queue2s.o $(CXXFLAGS)
