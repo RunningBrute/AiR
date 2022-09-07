@@ -1,0 +1,10 @@
+2             // tutaj wpisujemy ile chcemy miec elementow w tablicy Tab_produktow
+              // pierwszy produkt
+1.43          // cena
+gazeta        // nazwa
+10:10:09      // data 
+
+9.99          // cena kolejnego produktu
+ciasteczka    // nazwa kolejnego produktu
+01:02:10      // data kolejnego produktu
+                
